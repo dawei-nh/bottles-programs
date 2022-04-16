@@ -85,3 +85,11 @@ enlisted:
 #  Grade: Platinum
 #  Category: Games
 #  Icon: rockstar.png
+
+finalfantasyxiv:
+  Arch: win64
+  Name: Final Fantasy XIV Online
+  Description: XIVLauncher version of FFXIV.
+  Grade: Undefined
+  Category: Games
+  Icon: finalfantasyxiv.png

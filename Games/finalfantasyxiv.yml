@@ -1,0 +1,27 @@
+
+Name: finalfantasyxiv
+Description: Final Fantasy XIV Online launched with XIVLauncher.
+Grade: Undefined
+Arch: win64
+
+Dependencies:
+- allfonts
+- dotnet48
+- vcredist2019
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Final Fantasy XIV
+  icon: finalfantasyxiv.png
+  file: XIVLauncher.exe
+  path: userdir/AppData/Local/XIVLauncher/XIVLauncher.exe
+  arguments: XL_WINEONLINUX=true %command%
+  
+Steps:
+- action: install_exe
+  file_name: Setup.exe
+  url: https://github.com/goatcorp/FFXIVQuickLauncher/releases/download/6.2.29/Setup.exe
