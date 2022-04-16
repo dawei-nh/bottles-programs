@@ -25,3 +25,5 @@ Steps:
 - action: install_exe
   file_name: Setup.exe
   url: https://github.com/goatcorp/FFXIVQuickLauncher/releases/download/6.2.29/Setup.exe
+  file_checksum: 8ae3e4e395fd2a95632af0b6243c03a1
+  arguments: /s
