@@ -27,3 +27,14 @@ Steps:
   url: https://github.com/goatcorp/FFXIVQuickLauncher/releases/download/6.2.29/Setup.exe
   file_checksum: 8ae3e4e395fd2a95632af0b6243c03a1
   arguments: /s
+
+# Create the FFXIV config file and set a few settings to make it work on Linux.
+# Disable the opening cutscene as it doesn't work correctly on Linux.
+# Set to the old version of the launcher incase it is needed.
+- action: run_script
+  script: |
+    mkdir -p !bottle_drive/users/$(whoami)/Documents/My\ Games/FINAL\ FANTASY\ XIV\ -\ A\ Realm\ Reborn
+    echo -e "<FINAL FANTASY XIV Config File>\n\n<Cutscene Settings>\nCutsceneMovieOpening 1" > !bottle_drive/users/$(whoami)/Documents/My\ Games/FINAL\ FANTASY\ XIV\ -\ A\ Realm\ Reborn/FFXIV.cfg
+    echo -e "<FINAL FANTASY XIV Boot Config File>\n\n<Version>\nBrowser 1\nStartupCompleted 1" > !bottle_drive/users/$(whoami)/Documents/My\ Games/FINAL\ FANTASY\ XIV\ -\ A\ Realm\ Reborn/FFXIV_BOOT.cfg
+    touch userdir/test1
+    touch !userdir/test2
